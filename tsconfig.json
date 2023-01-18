@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "types": ["jest","cypress", "node"]
+  },
+  "exclude": ["node_modules", "tmp", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],
+  "include": [
+    "src/**/*",
+  ]
+}
