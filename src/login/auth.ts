@@ -100,9 +100,18 @@ const injectTokens = (tokenResponse: any, clientId: string) => {
     clientId,
   )
 
-  sessionStorage.setItem(accountKey, JSON.stringify(accountEntity))
-  sessionStorage.setItem(idTokenKey, JSON.stringify(idTokenEntity))
-  sessionStorage.setItem(accessTokenKey, JSON.stringify(accessTokenEntity))
+  const tokenKeys = {
+    idToken: [idTokenKey],
+    accessToken: [accessTokenKey],
+    refreshToken: [],
+  }
+
+  window.localStorage.setItem(`msal.token.keys.${clientId}`, JSON.stringify([tokenKeys]))
+  window.sessionStorage.setItem('msal.account.keys', JSON.stringify([accountKey]))
+
+  window.sessionStorage.setItem(accountKey, JSON.stringify(accountEntity))
+  window.sessionStorage.setItem(idTokenKey, JSON.stringify(idTokenEntity))
+  window.sessionStorage.setItem(accessTokenKey, JSON.stringify(accessTokenEntity))
 }
 
 export interface settingsArgs {
