@@ -1,6 +1,6 @@
 {
   "name": "@lcacollect/e2e-testing",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "E2E testing utilities for the LCAcollect apps",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
